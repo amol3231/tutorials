@@ -13,9 +13,15 @@ class Product(Resource):
         return {
             'products': ['Ice cream', 'Chocolate', 'Fruit', 'Eggs','Bread']
         }
+class Users(Resource):
+    def get(self):
+        return {
+            'Users': ['Amol', 'Anu', 'Aroob', 'Anish','Alan','Lini']
+        }
 
 # Create routes
-api.add_resource(Product, '/')
+#api.add_resource(Product, '/')
+api.add_resource(Users, '/')
 
 # Run the application
 if __name__ == '__main__':
